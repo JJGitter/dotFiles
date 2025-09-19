@@ -119,8 +119,9 @@ if ! shopt -oq posix; then
 fi
 export PATH="$PATH:~/bin/"
 export PROMPT_COMMAND="history -a; history -n"
-export PS1="\u@\h \W \[\033[32m\]\$(parse_git_branch)\[\033[00m\] \$ "
+export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
 
+export docker_hmi="172.24.215.31"
 parse_git_branch() {
-  git branch 2>/dev/null | sed -n '/\* /s///p'
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
