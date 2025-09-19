@@ -1,1 +1,19 @@
-/home/noah/repos/simemmy-scripts/.luarc.json
+{
+    "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "runtime": {
+        "version": "Lua 5.4"
+    },
+    "workspace": {
+        "ignoreDir": [
+            "/Emmy/",
+            "/HIU/",
+            "/HMIL"
+        ],
+        "checkThirdParty": false,
+        "preloadFileSize": 1000000
+    },
+    "diagnostics": {
+        "globals": ["printmsg", "printcmsg", "get", "tc1", "tc2"]
+      }
+
+}
