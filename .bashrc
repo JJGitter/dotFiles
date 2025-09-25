@@ -92,6 +92,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias pp='python3 ~/repos/simemmy-scripts/LEON/WorkflowUtils/print_test_plan_products.py'
 alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -121,7 +122,11 @@ export PATH="$PATH:~/bin/"
 export PROMPT_COMMAND="history -a; history -n"
 export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
 
+export master="10.64.72.21"
 export docker_hmi="172.24.215.31"
+export h_master="192.168.1.177"
+
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+export EDITOR=vim
