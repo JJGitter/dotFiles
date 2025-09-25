@@ -94,6 +94,7 @@ alias l='ls -CF'
 
 alias pp='python3 ~/repos/simemmy-scripts/LEON/WorkflowUtils/print_test_plan_products.py'
 alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias onedrive='cd "$ONEDRIVE"'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -130,3 +131,5 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 export EDITOR=vim
+export WINDOWS=/mnt/c/Users/conjoej
+export ONEDRIVE=/mnt/c/Users/conjoej/OneDrive\ -\ NIBE/

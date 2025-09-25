@@ -7,6 +7,7 @@ FILES=(
 	"$HOME/repos/simemmy-scripts/.rgignore"
 	"$HOME/.gitconfig"
         "/mnt/c/Users/conjoej/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
+	"$ONEDRIVE/AutoHotkey/SwedishLetters.ahk"
 	)
 
 DEST_DIR=$(pwd)
