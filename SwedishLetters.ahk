@@ -5,7 +5,7 @@
     Send("ö")
 }
 
-!':: Alt
+!':: ; Alt
 {
     Send("ä")
 }
@@ -15,17 +15,17 @@
     Send("å")
 }
 
-!+;:: Alt+Shift+;
-{
-    Send("Ö")
-}
-
-!+':: Alt+Shift
+!+':: ; Alt+Shift
 {
     Send("Ä")
 }
 
-!+[:: Alt+Shift
+!+[:: ; Alt+Shift
 {
     Send("Å")
+}
+
+!+;:: ; Alt+Shift+;
+{
+    Send("Ö")
 }
