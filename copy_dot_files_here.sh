@@ -6,6 +6,7 @@ FILES=(
 	"$HOME/repos/simemmy-scripts/.luarc.json"
 	"$HOME/repos/simemmy-scripts/.rgignore"
 	"$HOME/.gitconfig"
+	"$HOME/repos/simemmy-scripts/.git/info/exclude"
         "/mnt/c/Users/conjoej/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 	"$ONEDRIVE/AutoHotkey/SwedishLetters.ahk"
 	)
