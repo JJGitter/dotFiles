@@ -13,7 +13,7 @@
         "preloadFileSize": 1000000
     },
     "diagnostics": {
-        "globals": ["printmsg", "printcmsg", "get", "tc1", "tc2"]
+        "globals": ["printmsg", "printcmsg", "get", "tc1", "tc2", "tc3", "tc4", "tc5", "tc6", "tc7", "tc8", "init_test_suite", "tear_down_test_suite", "run_tests", "init_test_case", "tear_down_test_case"]
       }
 
 }

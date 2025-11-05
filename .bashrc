@@ -121,12 +121,17 @@ if ! shopt -oq posix; then
   fi
 fi
 export PATH="$PATH:~/bin/"
+export PATH="$PATH:~/.local/bin/"
+export PATH="$PATH:/opt/tools/"
 export PROMPT_COMMAND="history -a; history -n"
 export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
 
 export master="10.64.72.21"
+export slave=10.64.72.20
+export slave2=10.64.72.13
 export docker_hmi="172.24.215.31"
 export h_master="192.168.1.177"
+export h_slave="192.168.1.186"
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -134,4 +139,9 @@ parse_git_branch() {
 export EDITOR=vim
 export WINDOWS=/mnt/c/Users/conjoej
 export ONEDRIVE=/mnt/c/Users/conjoej/OneDrive\ -\ NIBE/
-export slave=10.64.72.20
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(zoxide init bash)"
