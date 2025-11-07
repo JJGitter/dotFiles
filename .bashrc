@@ -96,6 +96,7 @@ alias pp='python3 ~/repos/simemmy-scripts/LEON/WorkflowUtils/print_test_plan_pro
 alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias onedrive='cd "$ONEDRIVE"'
 alias cddocker='cd /home/noah/repos/simemmy-scripts/LEON/ContinousIntegration/Docker'
+alias tail-user-log='ssh hmi "tail -F /var/volatile/log/user" | tee ~/user_logs/log$(date '+_%Y-%m-%d_%H-%M-%S').log | ccze -A'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
