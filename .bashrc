@@ -97,6 +97,7 @@ alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 alias onedrive='cd "$ONEDRIVE"'
 alias cddocker='cd /home/noah/repos/simemmy-scripts/LEON/ContinousIntegration/Docker'
 alias tail-user-log='ssh hmi "tail -F /var/volatile/log/user" | tee ~/user_logs/log$(date '+_%Y-%m-%d_%H-%M-%S').log | ccze -A'
+alias get-hash='uv run ~/repos/noah-heatsystem/scripts/get_git_hash_of_build.py'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -127,12 +128,13 @@ export PATH="$PATH:/opt/tools/"
 export PROMPT_COMMAND="history -a; history -n"
 export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
 
-export master="10.64.72.21"
+export master="10.64.72.18"
 export slave=10.64.72.20
-export slave2=10.64.72.13
+export slave2=10.64.72.33
 export docker_hmi="172.24.215.31"
 export h_master="192.168.1.177"
-export h_slave="192.168.1.186"
+export h_slave="192.168.1.155"
+export h_slave2="192.168.1.98"
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -144,5 +146,8 @@ export ONEDRIVE=/mnt/c/Users/conjoej/OneDrive\ -\ NIBE/
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Expand variables during completion to the actual path
+shopt -s direxpand
 
 eval "$(zoxide init bash)"
